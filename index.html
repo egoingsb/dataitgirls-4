@@ -6,6 +6,52 @@
         </script>
     </head>
     <body>
+
+        <!--
+        1. 버튼을 만든다. 
+        2. onclick에 코드를 작성한다. 
+        3. 만약 버튼의 레이블이 night라면 
+                var bodyTag = document.querySelector('body');
+                bodyTag.style.backgroundColor='black';
+                bodyTag.style.color='white';
+                document.querySelector('#a1').style.color='white';
+                document.querySelector('#a2').style.color='white';
+                document.querySelector('#a3').style.color='white';
+                버튼의 value 값을 day로 변경한다. 
+            아니라면 
+                var bodyTag = document.querySelector('body');
+                bodyTag.style.backgroundColor='white';
+                bodyTag.style.color='black';
+                document.querySelector('#a1').style.color='black';
+                document.querySelector('#a2').style.color='black';
+                document.querySelector('#a3').style.color='black';
+                버튼의 value 값을 night로 변경한다. 
+        -->
+        <input type="button" id="screenModeBtn" value="night" onclick="
+            var mode = document.querySelector('#screenModeBtn').value;
+            if(mode === 'night'){
+                // 야간모드 코드
+                var bodyTag = document.querySelector('body');
+                bodyTag.style.backgroundColor='black';
+                bodyTag.style.color='white';
+                document.querySelector('#a1').style.color='white';
+                document.querySelector('#a2').style.color='white';
+                document.querySelector('#a3').style.color='white';
+                // 버튼의 value 값을 day로 변경
+                document.querySelector('#screenModeBtn').value = 'day';
+            } else {
+                // 주간모드 코드
+                var bodyTag = document.querySelector('body');
+                bodyTag.style.backgroundColor='white';
+                bodyTag.style.color='black';
+                document.querySelector('#a1').style.color='black';
+                document.querySelector('#a2').style.color='black';
+                document.querySelector('#a3').style.color='black';
+                // 버튼의 value 값을 night로 변경
+                document.querySelector('#screenModeBtn').value = 'night';
+            }
+        ">
+
         <!-- <h1 style="border:5px solid blue;background-color:green;">WEB</h1> -->
         <input type="button" value="day" onclick="
             var bodyTag = document.querySelector('body');
