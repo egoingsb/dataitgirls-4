@@ -35,9 +35,11 @@
                 bodyTag.style.backgroundColor='black';
                 bodyTag.style.color='white';
                 var as = document.querySelectorAll('a');
-                as[0].style.color='white';
-                as[1].style.color='white';
-                as[2].style.color='white';
+                var i=0;
+                while(i<as.length){
+                    as[i].style.color = 'white';
+                    i=i+1;
+                }
                 // 버튼의 value 값을 day로 변경
                 document.querySelector('#screenModeBtn').value = 'day';
             } else {
@@ -45,9 +47,12 @@
                 var bodyTag = document.querySelector('body');
                 bodyTag.style.backgroundColor='white';
                 bodyTag.style.color='black';
-                document.querySelector('#a1').style.color='black';
-                document.querySelector('#a2').style.color='black';
-                document.querySelector('#a3').style.color='black';
+                var as = document.querySelectorAll('a');
+                var i=0;
+                while(i<as.length){
+                    as[i].style.color = 'black';
+                    i=i+1;
+                }
                 // 버튼의 value 값을 night로 변경
                 document.querySelector('#screenModeBtn').value = 'night';
             }
