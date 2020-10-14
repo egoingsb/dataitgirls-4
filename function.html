@@ -1,21 +1,19 @@
 <html>
     <body>
         <script>
-            function 복잡행함수(){
-                alert('복');
-                alert('잡');
-                alert('해');
+            function 복잡행함수(주어){
+                return 주어+"복잡해";
             }
         </script>
         <h1>Function</h1>
         <input type="button" value="복잡한 작업 실행" onclick="
-            복잡행함수();
+            alert(복잡행함수('나는'));
         ">
         <input type="button" value="복잡한 작업 실행" onclick="
-            복잡행함수();
+            prompt(복잡행함수('너는'));
         ">
         <input type="button" value="복잡한 작업 실행" onclick="
-            복잡행함수();
+            confirm(복잡행함수('우리는'));
         ">
     </body>
 </html>
