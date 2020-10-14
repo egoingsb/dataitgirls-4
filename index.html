@@ -7,37 +7,24 @@
     </head>
     <body>
         <script>
-            function 야간모드(){
+            function 스크린모드(배경색, 폰트색, 레이블){
                 var bodyTag = document.querySelector('body');
-                bodyTag.style.backgroundColor='black';
-                bodyTag.style.color='white';
+                bodyTag.style.backgroundColor=배경색;
+                bodyTag.style.color=폰트색;
                 var as = document.querySelectorAll('a');
                 var i=0;
                 while(i<as.length){
-                    as[i].style.color = 'white';
+                    as[i].style.color = 폰트색;
                     i=i+1;
                 }
-                document.querySelector('#screenModeBtn').value = 'day';
-            }
-            function 주간모드(){
-                var bodyTag = document.querySelector('body');
-                bodyTag.style.backgroundColor='white';
-                bodyTag.style.color='black';
-                var as = document.querySelectorAll('a');
-                var i=0;
-                while(i<as.length){
-                    as[i].style.color = 'black';
-                    i=i+1;
-                }
-                // 버튼의 value 값을 night로 변경
-                document.querySelector('#screenModeBtn').value = 'night';
+                document.querySelector('#screenModeBtn').value = 레이블;
             }
             function 주야간모드(){
                 var mode = document.querySelector('#screenModeBtn').value;
                 if(mode === 'night'){
-                    야간모드();
+                    스크린모드('black', 'white', 'day');
                 } else {
-                    주간모드();
+                    스크린모드('white', 'black', 'night');
                 }
             }
         </script>
