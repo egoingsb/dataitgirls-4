@@ -34,9 +34,10 @@
                 var bodyTag = document.querySelector('body');
                 bodyTag.style.backgroundColor='black';
                 bodyTag.style.color='white';
-                document.querySelector('#a1').style.color='white';
-                document.querySelector('#a2').style.color='white';
-                document.querySelector('#a3').style.color='white';
+                var as = document.querySelectorAll('a');
+                as[0].style.color='white';
+                as[1].style.color='white';
+                as[2].style.color='white';
                 // 버튼의 value 값을 day로 변경
                 document.querySelector('#screenModeBtn').value = 'day';
             } else {
