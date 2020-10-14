@@ -27,21 +27,26 @@
                 document.querySelector('#a3').style.color='black';
                 버튼의 value 값을 night로 변경한다. 
         -->
+        <script>
+        function nightMode(){
+            var bodyTag = document.querySelector('body');
+            bodyTag.style.backgroundColor='black';
+            bodyTag.style.color='white';
+            var as = document.querySelectorAll('a');
+            var i=0;
+            while(i<as.length){
+                as[i].style.color = 'white';
+                i=i+1;
+            }
+            // 버튼의 value 값을 day로 변경
+            document.querySelector('#screenModeBtn').value = 'day';
+        }
+        </script>
         <input type="button" id="screenModeBtn" value="night" onclick="
             var mode = document.querySelector('#screenModeBtn').value;
             if(mode === 'night'){
                 // 야간모드 코드
-                var bodyTag = document.querySelector('body');
-                bodyTag.style.backgroundColor='black';
-                bodyTag.style.color='white';
-                var as = document.querySelectorAll('a');
-                var i=0;
-                while(i<as.length){
-                    as[i].style.color = 'white';
-                    i=i+1;
-                }
-                // 버튼의 value 값을 day로 변경
-                document.querySelector('#screenModeBtn').value = 'day';
+                nightMode();
             } else {
                 // 주간모드 코드
                 var bodyTag = document.querySelector('body');
